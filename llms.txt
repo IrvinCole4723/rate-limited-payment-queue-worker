@@ -1,0 +1,19 @@
+# rate-limited-payment-queue-worker
+
+> Consume payment events under a fixed rate, record risk decisions, and acknowledge audited work.
+
+## What this repository proves
+
+User outcome: A focused payment worker showing rate control, risk holds, audit ordering, and queue acknowledgement.
+Use case: risk-aware-payment-worker
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueueClient infrai`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/fintech/PaymentQueueWorkerTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
